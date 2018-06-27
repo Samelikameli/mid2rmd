@@ -39,7 +39,6 @@ while False in EOT:
             if event.name=="Key Signature":
                 keysignature[i]=[event.data[0],event.data[1]]
             if event.name=="End of Track":
-                print("EOT")
                 notes[i].append([current_note[i][0],tick-current_note[i][1]])
                 EOT[i]=True
             if event.name=="Set Tempo":
