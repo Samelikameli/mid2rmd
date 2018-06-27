@@ -28,17 +28,14 @@ for i in range(len(pattern)):
     notes.append([])
     current_note.append([0,0])
     EOT.append(False)
-tick2ms=1
+tick2ms=1 
 while False in EOT:
     for i in range(len(pattern)):
-        #print("Track "+str(i))
         track=pattern[i]
         if queue[i]==0 and not EOT[i]:
             event=track[eventI[i]]
             print(event,tick)
-            #raw_input()
             eventI[i]+=1
-            #raw_input(event.name)
             if event.name=="Key Signature":
                 keysignature[i]=[event.data[0],event.data[1]]
             if event.name=="End of Track":
