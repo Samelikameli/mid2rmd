@@ -72,26 +72,6 @@ while False in EOT:
         tick+=1
     no_tick=False
 
-    #print(tick)
-    #for event in track:
-        #print(event)
-        #if event.name=="Time Signature":
-        #    timesignature=[event.data[0],event.data[1]**2,event.data[2],event.data[3]]
-        #if event.name=="Key Signature":
-        #    keysignature=[event.data[0],event.data[1]]
-        #if event.name=="Set Tempo":
-        #    microseconds=int(hex(event.data[0])[2:]+hex(event.data[1])[2:]+hex(event.data[2])[2:],16)
-        #    
-        #    tick2ms=microseconds/(1000.0*resolution)
-        #    print(tick2ms)
-        #if event.name=="Note On":
-        #    duration=int(round(event.tick*tick2ms))
-        #    if event.data[1]!=0:
-        #        notes.append([0,duration])
-        #    else:
-        #        notes.append([getFrequency(event.data[0]),duration])
-                #print(event.data[0])
-                #print(getFrequency(event.data[0]))
 print(notes)
 
 for i in range(len(notes)):
